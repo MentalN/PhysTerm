@@ -19,4 +19,6 @@ def mPlanet(name):
     name = name.lower()
     if name in masses:
         return masses[name]
+    else:
+        return False
 
