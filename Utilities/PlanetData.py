@@ -1,4 +1,4 @@
-#   File: main.py
+#   File: PlanetData.py
 #   Author: Nawaf Abdullah
 #   Creation Date: 4/April/2018
 #   Description: support module for PhysTerm. Solar system planets data.
@@ -21,4 +21,3 @@ def mPlanet(name):
         return masses[name]
     else:
         return False
-
