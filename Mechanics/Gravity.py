@@ -3,37 +3,69 @@ from Utilities.PlanetData import mPlanet
 from Utilities.Constants import G
 
 
-def force():
+def gForce():
     print("Gravitational Force")
+
     m1 = input("Mass of the first object m1> ")
     if mPlanet(m1) is False:
-        numeric(m1)
+        try:
+            m1 = float(m1)
+        except ValueError:
+            m1 = numeric(m1)
     else:
         m1 = mPlanet(m1)
+
     m2 = input("Mass of the second object m2> ")
     if mPlanet(m2) is False:
-        numeric(m2)
+        try:
+            m2 = float(m2)
+        except ValueError:
+            m2 = numeric(m2)
     else:
-        m1 = mPlanet(m2)
-    r = numeric(input("Distance between the two objects> "))
-    F = (G*m1*m2)/(r*r)
-    print("Force of gravity F=",F)
+        m2 = mPlanet(m2)
+
+    r = input("Distance between two objects> ")
+    try:
+        r = float(r)
+    except ValueError:
+        r = numeric(r)
+
+    F = G*m1*m2/(r*r)
+    print("Force of gravity F=", F)
+
     return F
 
 
-def potential():
+def gPotential():
     print("Gravitational Potential")
+
     m1 = input("Mass of the first object m1> ")
     if mPlanet(m1) is False:
-        numeric(m1)
+        try:
+            m1 = float(m1)
+        except ValueError:
+            m1 = numeric(m1)
     else:
         m1 = mPlanet(m1)
+
     m2 = input("Mass of the second object m2> ")
     if mPlanet(m2) is False:
-        numeric(m2)
+        try:
+            m2 = float(m2)
+        except ValueError:
+            m2 = numeric(m2)
     else:
-        m1 = mPlanet(m2)
-    r = numeric(input("Distance between the two objects> "))
-    U = (G*m1*m2)/(r)
+        m2 = mPlanet(m2)
+
+    r = input("Distance between two objects> ")
+    try:
+        r = float(r)
+    except ValueError:
+        r = numeric(r)
+
+    U = G*m1*m2/(r)
     print("gravitational potential energy  U =", U)
+
     return U
+
+
