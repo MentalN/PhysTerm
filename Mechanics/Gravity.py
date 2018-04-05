@@ -1,3 +1,8 @@
+#   File: Gravity.py
+#   Author: Nawaf Abdullah
+#   Creation Date: 4/April/2018
+#   Description: Gravity calculations
+
 from Utilities.Checkers import numeric
 from Utilities.PlanetData import mPlanet
 from Utilities.Constants import G
