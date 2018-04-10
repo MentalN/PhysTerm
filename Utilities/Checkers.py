@@ -19,6 +19,7 @@ def numeric(num):
 
 #   Returns the wavelength position on the Electromagnetic Spectrum
 def EMspectrum(L):
+    L = abs(L)
     if L <= 1e-11:
         em_spec = "Gamma Rays"
     elif 1e-8 >= L >= 1e-11:
@@ -34,3 +35,9 @@ def EMspectrum(L):
     elif L >= 1e-3:
         em_spec = "Radio waves"
     return em_spec
+
+
+#   Pauses the program so that the user can see the output
+def pause():
+    anything = input("Type anything to continue the program > ")
+    pass
