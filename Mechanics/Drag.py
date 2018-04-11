@@ -2,7 +2,7 @@
 #   Author: Nawaf Abdullah
 #   Creation Date: 5/April/2018
 #   Description: Drag Calculations
-from Utilities.Checkers import numeric
+from Utilities.Checkers import numeric, pause
 from Utilities.Constants import a_g
 from math import sqrt
 
@@ -45,6 +45,7 @@ def terminalVelocity():
     v_term = sqrt((2*m*a_g)/(Cd*p*A))
     print("Terminal velocity v = ", v_term)
 
+    pause()
     return v_term
 
 
@@ -81,6 +82,7 @@ def dragForce():
     F_d = 0.5*Cd*p*v*v*A
     print("Drag force Fd = ", F_d)
 
+    pause()
     return F_d
 
 
