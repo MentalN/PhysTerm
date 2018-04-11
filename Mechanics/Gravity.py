@@ -3,7 +3,7 @@
 #   Creation Date: 4/April/2018
 #   Description: Gravity calculations
 
-from Utilities.Checkers import numeric
+from Utilities.Checkers import numeric, pause
 from Utilities.PlanetData import mPlanet
 from Utilities.Constants import G
 
@@ -38,6 +38,7 @@ def gForce():
     F = G*m1*m2/(r*r)
     print("Force of gravity F=", F)
 
+    pause()
     return F
 
 
@@ -71,6 +72,7 @@ def gPotential():
     U = G*m1*m2/(r)
     print("gravitational potential energy  U =", U)
 
+    pause()
     return U
 
 
