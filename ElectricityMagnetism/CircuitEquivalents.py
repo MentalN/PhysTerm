@@ -2,7 +2,7 @@
 #   Author: Nawaf Abdullah
 #   Creation Date: 7/April/2018
 #   Description: Calculating circuit equivalents for resistors, capacitors, and inductors
-from Utilities.Checkers import numeric
+from Utilities.Checkers import numeric, pause
 
 
 #   Resistors
@@ -27,6 +27,7 @@ def parallelResistors():
 
     print("Equivalent resistance R = ", R_eq)
 
+    pause()
     return R_eq
 
 
@@ -50,6 +51,7 @@ def seriesResistors():
 
     print("Equivalent resistance R = ", R_eq)
 
+    pause()
     return R_eq
 
 
@@ -74,6 +76,7 @@ def parallelCapacitors():
 
     print("Equivalent capacitance C = ", C_eq)
 
+    pause()
     return C_eq
 
 
@@ -98,6 +101,7 @@ def seriesCapacitors():
 
     print("Equivalent capacitance C = ", C_eq)
 
+    pause()
     return C_eq
 
 
@@ -123,6 +127,7 @@ def parallelInductors():
 
     print("Equivalent inductance L = ", L_eq)
 
+    pause()
     return L_eq
 
 
@@ -146,4 +151,5 @@ def seriesInductors():
 
     print("Equivalent inductance C = ", L_eq)
 
+    pause()
     return L_eq
