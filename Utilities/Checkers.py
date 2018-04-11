@@ -37,11 +37,10 @@ def EMspectrum(L):
     return em_spec
 
 
-#   TODO: return to main menu
-#   TODO: Terminate program
 #   Pauses the program so that the user can see the output
 def pause():
-    cmd = input("Type anything to continue the program > ")
-    pass
-
-
+    cmd = input("Type anything to continue, or 'exit' to terminate> ")
+    if cmd == "exit":
+        exit()
+    else:
+        pass
