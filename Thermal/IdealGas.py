@@ -3,7 +3,7 @@
 #   Creation Date: 8/April/2018
 #   Description: Ideal gas calculations
 from Utilities.Constants import R
-from Utilities.Checkers import numeric
+from Utilities.Checkers import numeric, pause
 from sympy.solvers import solve
 from sympy import Symbol
 
@@ -57,4 +57,5 @@ def idealGas():
         idealGas()
 
     print(result)
+    pause()
     return result
