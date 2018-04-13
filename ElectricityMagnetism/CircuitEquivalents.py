@@ -5,6 +5,21 @@
 from Utilities.Checkers import numeric, pause
 
 
+def eqv_selector(key):
+    if key == 1:
+        parallelResistors()
+    elif key == 2:
+        seriesResistors()
+    elif key == 3:
+        parallelCapacitors()
+    elif key == 4:
+        seriesCapacitors()
+    elif key == 5:
+        parallelInductors()
+    elif key == 6:
+        seriesInductors()
+
+
 #   Resistors
 def parallelResistors():
     num_R = input("Number of parallel resistors> ")
