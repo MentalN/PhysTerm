@@ -3,7 +3,6 @@
 #   Creation Date: 4/April/2018
 #   Description: main menu of PhysTerm. Program runtime starts here.
 # Mechanics Imports
-from Mechanics.Drag import *
 from Mechanics.Gravity import *
 from Mechanics.Drag import *
 # ElectricityMagnetism Imports
@@ -14,6 +13,11 @@ from Thermal.IdealGas import *
 from QuantumMechanics.PhotoelectricEffect import *
 
 
+#   TODO: help functions should just print out all in dicts
+#   TODO: Log calculations in a .txt or .xml format
+#   TODO: Add the ability to adjust settings
+
+#   Main interface
 def main():
     print("You can type 'list' for available options")
     entry = input("PhysTerm>> ")
@@ -35,13 +39,16 @@ def main():
     main()
 
 
+#   Main interface redirects to Mech for mechanics problems
 def mech():
+    #   Shows available commands for mechanics problems
     def mech_help():
         print("Entries: ")
         print("gravity")
         print("drag")
         mech()
 
+    #   Dictionaries holding the imported physics functions
     drag_dict = {"terminal velocity": terminalVelocity, "force": dragForce}
     gravity_dict = {"force": gForce, "potential": gPotential}
 
@@ -69,11 +76,14 @@ def mech():
         mech_help()
 
 
+#   Main interface redirects to em for E&M problems
 def em():
+    #   Shows available commands for E&M problems
     def em_help():
         print("Entries: ")
         print("equivalent")
 
+    #   Dictionaries holding the imported physics functions
     eqv_dict = {"equivalent": eqv_selector}
 
     entry = input("PhysTerm>E&M>> ")
@@ -124,12 +134,15 @@ def em():
         em()
 
 
+#   Main interface redirects to thermal for thermal physics problems
 def thermal():
+    #   Shows available commands for thermal physics
     def thermal_help():
         print("Entries: ")
         print("ideal gas")
         thermal()
 
+    #   Dictionaries holding the imported physics functions
     therm_dict = {"ideal gas": idealGas}
     entry = input("PhysTerm>Thermal>> ")
     if entry.lower() in therm_dict:
@@ -146,12 +159,15 @@ def thermal():
         thermal()
 
 
+#   Main interface redirects to quantum for quantum mechanics problems
 def quantum():
+    #   Shows available commands for quantum mechanics
     def qm_help():
         print("Entries: ")
         print("transition")
         quantum()
 
+    #   Dictionaries holding the imported physics functions
     qm_dict = {"transition": transition}
     entry = input("PhysTerm>Quantum>> ")
     if entry.lower() in qm_dict:
@@ -168,8 +184,9 @@ def quantum():
         quantum()
 
 
+#   main interface redierects to help_main to show the user available commands
 def help_main():
-    print("Entries: ")
+    print("Commands: ")
     print("'mechanics' for classical mechanics")
     print("'em' for electricity and magnetism")
     print("'Thermal' for Thermal Physics")
