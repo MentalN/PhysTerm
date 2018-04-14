@@ -34,7 +34,7 @@ def parallelResistors():
         print("Enter the resistance value of Resistor [", x + 1, "]")
         R_n = input("> ")
         try:
-            R_n = float(R_eq)
+            R_n = float(R_n)
         except ValueError:
             R_n = numeric(R_n)
         R_eq += 1 / R_n
@@ -59,7 +59,7 @@ def seriesResistors():
         print("Enter the resistance value of Resistor [", x + 1, "]")
         R_n = input("> ")
         try:
-            R_n = float(R_eq)
+            R_n = float(R_n)
         except ValueError:
             R_n = numeric(R_n)
         R_eq += R_n
@@ -84,7 +84,7 @@ def parallelCapacitors():
         print("Enter the capacitance value of capacitor [", x + 1, "]")
         C_n = input("> ")
         try:
-            C_n = float(C_eq)
+            C_n = float(C_n)
         except ValueError:
             C_n = numeric(C_n)
         C_eq += C_n
@@ -108,7 +108,7 @@ def seriesCapacitors():
         print("Enter the capacitance value of capacitor [", x + 1, "]")
         C_n = input("> ")
         try:
-            C_n = float(C_eq)
+            C_n = float(C_n)
         except ValueError:
             C_n = numeric(C_n)
         C_eq += 1 / C_n
@@ -134,7 +134,7 @@ def parallelInductors():
         print("Enter the inductance value of inductors [", x + 1, "]")
         L_n = input("> ")
         try:
-            L_n = float(L_eq)
+            L_n = float(L_n)
         except ValueError:
             L_n = numeric(L_n)
         L_eq += 1 / L_n
@@ -159,7 +159,7 @@ def seriesInductors():
         print("Enter the capacitance value of inductors [", x + 1, "]")
         L_n = input("> ")
         try:
-            L_n = float(L_eq)
+            L_n = float(L_n)
         except ValueError:
             L_n = numeric(L_n)
         L_eq += L_n
