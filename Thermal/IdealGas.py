@@ -25,6 +25,7 @@ def idealGas():
     except ValueError:
         select = numeric(select)
 
+    result_name = var_list[select-1][1]
     del var_list[select-1]
 
     def var_filler():
@@ -56,6 +57,6 @@ def idealGas():
         print("Please enter a valid selection")
         idealGas()
 
-    print(result)
+    print("Value for", result_name, "=", result)
     pause()
     return result
