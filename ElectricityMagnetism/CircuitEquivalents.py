@@ -3,6 +3,7 @@
 #   Creation Date: 7/April/2018
 #   Description: Calculating circuit equivalents for resistors, capacitors, and inductors
 from Utilities.Checkers import numeric, pause
+from Utilities.Logger import logger
 
 
 def eqv_selector(key):
@@ -42,6 +43,9 @@ def parallelResistors():
 
     print("Equivalent resistance R = ", R_eq)
 
+    log_str = "Equivalent resistance R = " + str(R_eq)
+    logger(log_str)
+
     pause()
     return R_eq
 
@@ -65,6 +69,9 @@ def seriesResistors():
         R_eq += R_n
 
     print("Equivalent resistance R = ", R_eq)
+
+    log_str = "Equivalent resistance R = " + str(R_eq)
+    logger(log_str)
 
     pause()
     return R_eq
@@ -91,6 +98,9 @@ def parallelCapacitors():
 
     print("Equivalent capacitance C = ", C_eq)
 
+    log_str = "Equivalent capacitance C = " + str(C_eq)
+    logger(log_str)
+
     pause()
     return C_eq
 
@@ -115,6 +125,9 @@ def seriesCapacitors():
     C_eq = C_eq**-1
 
     print("Equivalent capacitance C = ", C_eq)
+
+    log_str = "Equivalent capacitance C = " + str(C_eq)
+    logger(log_str)
 
     pause()
     return C_eq
@@ -142,6 +155,9 @@ def parallelInductors():
 
     print("Equivalent inductance L = ", L_eq)
 
+    log_str = "Equivalent inductance L = " + str(L_eq)
+    logger(log_str)
+
     pause()
     return L_eq
 
@@ -164,7 +180,10 @@ def seriesInductors():
             L_n = numeric(L_n)
         L_eq += L_n
 
-    print("Equivalent inductance C = ", L_eq)
+    print("Equivalent inductance L = ", L_eq)
+
+    log_str = "Equivalent inductance L = " + str(L_eq)
+    logger(log_str)
 
     pause()
     return L_eq

@@ -4,6 +4,7 @@
 #   Description: Photoelectric effect calculations
 from Utilities.Checkers import numeric, EMspectrum, pause
 from Utilities.Constants import R_d, c, h
+from Utilities.Logger import logger
 
 
 def transition():
@@ -41,6 +42,12 @@ def transition():
 
     E = h*f
     print("Energy of the photon E =", E)
+
+    log_str = "Transition Wavelength l= " + str(wav) + "\n" \
+              "                               " + "EM spectrum:" + str(EMspectrum(wav)) + "\n" \
+              "                               " + "Corresponding frequency f =" + str(f) + "\n" \
+              "                               " + "Energy of the photon E =" + str(E)
+    logger(log_str)
 
     pause()
     return wav

@@ -6,6 +6,7 @@
 from Utilities.Checkers import numeric, pause
 from Utilities.PlanetData import mPlanet
 from Utilities.Constants import G
+from Utilities.Logger import logger
 
 
 def gForce():
@@ -37,6 +38,9 @@ def gForce():
 
     F = G*m1*m2/(r*r)
     print("Force of gravity F=", F)
+
+    log_str = "Force of gravity F=", str(F)
+    logger(log_str)
 
     pause()
     return F
@@ -71,6 +75,10 @@ def gPotential():
 
     U = G*m1*m2/(r)
     print("gravitational potential energy  U =", U)
+
+    log_str = "gravitational potential energy  U =" + str(U)
+    logger(log_str)
+
 
     pause()
     return U

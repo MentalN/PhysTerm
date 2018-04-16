@@ -4,6 +4,7 @@
 #   Description: Drag Calculations
 from Utilities.Checkers import numeric, pause
 from Utilities.Constants import a_g
+from Utilities.Logger import logger
 from math import sqrt
 
 Cd_dict = {'sphere':      0.47, 'half sphere':   0.42, 'cone': 0.50, 'cube': 1.05,
@@ -45,6 +46,9 @@ def terminalVelocity():
     v_term = sqrt((2*m*a_g)/(Cd*p*A))
     print("Terminal velocity v = ", v_term)
 
+    log_str = "Terminal velocity v = " + str(v_term)
+    logger(log_str)
+
     pause()
     return v_term
 
@@ -81,6 +85,9 @@ def dragForce():
 
     F_d = 0.5*Cd*p*v*v*A
     print("Drag force Fd = ", F_d)
+
+    log_str = "Drag force Fd = " + str(F_d)
+    logger(log_str)
 
     pause()
     return F_d

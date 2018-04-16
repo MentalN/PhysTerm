@@ -11,3 +11,4 @@ def logger(output):
     log_str = "[" + str(datetime.now()) + "] > " + output + "\n"
     log.write(log_str)
 
+

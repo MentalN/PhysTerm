@@ -13,9 +13,6 @@ from Thermal.IdealGas import *
 from QuantumMechanics.PhotoelectricEffect import *
 
 
-#   TODO: Log calculations in a .txt or .xml format
-#   TODO: Add the ability to adjust settings
-
 #   Main interface
 def main():
     print("You can type 'list' for available options")

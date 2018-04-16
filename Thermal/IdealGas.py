@@ -4,6 +4,7 @@
 #   Description: Ideal gas calculations
 from Utilities.Constants import R
 from Utilities.Checkers import numeric, pause
+from Utilities.Logger import logger
 from sympy.solvers import solve
 from sympy import Symbol
 
@@ -58,5 +59,9 @@ def idealGas():
         idealGas()
 
     print("Value for", result_name, "=", result)
+
+    log_str = "Value for " + str(result_name) + "=" + str(result)
+    logger(log_str)
+
     pause()
     return result
