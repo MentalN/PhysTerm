@@ -22,6 +22,8 @@ During runtime, the program itself have built-in commands to guide the user thro
 When the user inputting values for some physics calculations, they can just type in the "name" of a value, for instance:
  - When calculating gravitational force, the user can type "venus" when inputting mass to get the mass of planet Venus.
  - When calculating drag force, the user can type "sphere" when inputting drag coeffecient to get to get the value for sphere
+
+PhysTerm also logs all functions outputs during program runtime to a file log.txt
  
 
 # Current Available Functions
@@ -33,3 +35,7 @@ E & M:      - Circuit Equivalents [Resistors - Capacitors - Inductors]
 Thermal:    - Ideal Gas Equation
 
 Quantum Mechanics:      - Photoelectric effect
+
+
+# Growing PhysTerm
+PhysTerm code was designed in a way to allow adding more physics functions easily by just adding the code to the appropriate directory, and then updating the relevant dictionary in main. The long-term goal of this project is to have the program able to solve all problems from all areas in physics.
