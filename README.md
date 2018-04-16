@@ -22,3 +22,14 @@ During runtime, the program itself have built-in commands to guide the user thro
 When the user inputting values for some physics calculations, they can just type in the "name" of a value, for instance:
  - When calculating gravitational force, the user can type "venus" when inputting mass to get the mass of planet Venus.
  - When calculating drag force, the user can type "sphere" when inputting drag coeffecient to get to get the value for sphere
+ 
+
+# Current Available Functions
+Mechanics:  - Drag [Terminial Velocity - Drag Force]
+            - Gravity [g Force, g Potential]
+
+E & M:      - Circuit Equivalents [Resistors - Capacitors - Inductors]
+
+Thermal:    - Ideal Gas Equation
+
+Quantum Mechanics:      - Photoelectric effect
