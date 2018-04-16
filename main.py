@@ -13,7 +13,6 @@ from Thermal.IdealGas import *
 from QuantumMechanics.PhotoelectricEffect import *
 
 
-#   TODO: help functions should just print out all in dicts
 #   TODO: Log calculations in a .txt or .xml format
 #   TODO: Add the ability to adjust settings
 
@@ -41,13 +40,6 @@ def main():
 
 #   Main interface redirects to Mech for mechanics problems
 def mech():
-    #   Shows available commands for mechanics problems
-    def mech_help():
-        print("Entries: ")
-        print("gravity")
-        print("drag")
-        mech()
-
     #   Dictionaries holding the imported physics functions
     drag_dict = {"terminal velocity": terminalVelocity, "force": dragForce}
     gravity_dict = {"force": gForce, "potential": gPotential}
@@ -73,18 +65,18 @@ def mech():
             mech()
 
     elif entry.lower() == "list":
-        mech_help()
+        print("Available commands for Drag: ")
+        for key in drag_dict:
+            print("> ", key)
+        print("Available commands for Gravity: ")
+        for key in gravity_dict:
+            print("> ", key)
 
 
 #   Main interface redirects to em for E&M problems
 def em():
-    #   Shows available commands for E&M problems
-    def em_help():
-        print("Entries: ")
-        print("equivalent")
-
     #   Dictionaries holding the imported physics functions
-    eqv_dict = {"equivalent": eqv_selector}
+    em_dict = {"equivalent": eqv_selector}
 
     entry = input("PhysTerm>E&M>> ")
 
@@ -96,35 +88,37 @@ def em():
             print("select: 'parallel' or 'series'")
             entry3 = input("PhysTerm>E&M>CircuitEquivalent>resistors>> ")
             if entry3 == "parallel":
-                eqv_dict["equivalent"](1)
+                em_dict["equivalent"](1)
             elif entry3 == "series":
-                eqv_dict["equivalent"](2)
+                em_dict["equivalent"](2)
 
         elif entry2.lower() == "capacitors":
             print("select: 'parallel' or 'series'")
             entry3 = input("PhysTerm>E&M>CircuitEquivalent>capacitors>> ")
             if entry3 == "parallel":
-                eqv_dict["equivalent"](3)
+                em_dict["equivalent"](3)
             elif entry3 == "series":
-                eqv_dict["equivalent"](4)
+                em_dict["equivalent"](4)
 
         elif entry2.lower() == "inductors":
             print("select: 'parallel' or 'series'")
             entry3 = input("PhysTerm>E&M>CircuitEquivalent>inductors>> ")
             if entry3 == "parallel":
-                eqv_dict["equivalent"](5)
+                em_dict["equivalent"](5)
             elif entry3 == "series":
-                eqv_dict["equivalent"](6)
+                em_dict["equivalent"](6)
 
         else:
             print("Command not found!")
             em()
 
-    elif entry.lower() in eqv_dict:
-            eqv_dict[entry.lower()]()
+    elif entry.lower() in em_dict:
+            em_dict[entry.lower()]()
 
     elif entry.lower() == "list":
-        em_help()
+        print("Available commands: ")
+        for key in em_dict:
+            print("> ", key)
 
     elif entry.lower() == "exit":
         exit()
@@ -136,12 +130,6 @@ def em():
 
 #   Main interface redirects to thermal for thermal physics problems
 def thermal():
-    #   Shows available commands for thermal physics
-    def thermal_help():
-        print("Entries: ")
-        print("ideal gas")
-        thermal()
-
     #   Dictionaries holding the imported physics functions
     therm_dict = {"ideal gas": idealGas}
     entry = input("PhysTerm>Thermal>> ")
@@ -149,7 +137,9 @@ def thermal():
         therm_dict[entry.lower()]()
 
     elif entry.lower() == "list":
-        thermal_help()
+        print("Available commands: ")
+        for key in therm_dict:
+            print("> ", key)
 
     elif entry.lower() == "exit":
         exit()
@@ -161,12 +151,6 @@ def thermal():
 
 #   Main interface redirects to quantum for quantum mechanics problems
 def quantum():
-    #   Shows available commands for quantum mechanics
-    def qm_help():
-        print("Entries: ")
-        print("transition")
-        quantum()
-
     #   Dictionaries holding the imported physics functions
     qm_dict = {"transition": transition}
     entry = input("PhysTerm>Quantum>> ")
@@ -174,7 +158,9 @@ def quantum():
         qm_dict[entry.lower()]()
 
     elif entry.lower() == "list":
-        qm_help()
+        print("Available commands: ")
+        for key in qm_dict:
+            print("> ", key)
 
     elif entry.lower() == "exit":
         exit()
