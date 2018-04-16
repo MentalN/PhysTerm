@@ -13,5 +13,6 @@ and in Linux:
       > python3 PhysTerm.py
 
 Running the program with full functionality requires the following dependecies:
+
       - SymPy
 
