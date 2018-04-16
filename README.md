@@ -14,5 +14,5 @@ and in Linux:
 
 Running the program with full functionality requires the following dependecies:
 
-      - SymPy
+      SymPy
 
